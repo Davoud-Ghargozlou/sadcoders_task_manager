@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Auth = () => {
   return (
     <div>
-      <Link to={"/"}>login</Link>
+      <Link to={"/"}>ورود</Link>
     </div>
   );
 };
