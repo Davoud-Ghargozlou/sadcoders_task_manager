@@ -10,6 +10,9 @@ export default {
       serif:["Estedad"],
     },
     extend: {
+      width:{
+        '100':'34rem'
+      },
       colors:{
         primary:{
           100:"#ffdada",
