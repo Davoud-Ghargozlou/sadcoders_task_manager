@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 
-const Button = ({ children, variant = "fill", size = "md", ...props }) => {
+const Button = ({ children, variant, size, ...props }) => {
   const variants = {
-    fill: "bg-orange-500 py-2 px-4 hover:bg-slate-400 rounded-md m-2",
-    outline: "",
+    fill: "rounded-md text-blue-200 border border-blue-200 ",
+    outline: "rounded-md text-white bg-blue-200",
   };
   const sizes = {
-    sm: "p-2",
-    md: "p-10 bg-red-500",
+    sm: "py-3 px-7",
+    md: "py-3 px-7 ",
   };
   return (
     <button
