@@ -1,17 +1,14 @@
-import { Link } from "react-router-dom"
-import Auth from "./Auth"
-import Profile from "./Profile"
-import Input from "../components/Input/Input"
+import Auth from "./Auth";
+import Profile from "./Profile";
 
 const Homepage = () => {
   return (
     <>
-    pages:
-    <Input/>
-    <Auth/>
-    <Profile/>
+      pages:
+      <Auth />
+      <Profile />
     </>
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;
