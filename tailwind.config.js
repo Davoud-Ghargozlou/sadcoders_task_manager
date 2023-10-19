@@ -21,7 +21,16 @@ export default {
         blue:{
           200:"#3758F9"
         },
-      }
+        red:{
+          100:"#FF3838"
+        },
+        purple:{
+          100:"#891BE8"
+        },
+        green:{
+          100:"#1AD698"
+        },
+      },
     },
   },
   plugins: [],

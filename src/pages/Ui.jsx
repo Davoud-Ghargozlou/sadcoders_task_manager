@@ -6,6 +6,7 @@ import Users from "../components/Users/Users";
 import Button from "../components/UI/Button";
 import Input from "../components/Input/Input";
 import InputCard from "../components/Input/InputCard";
+import Priorities from "../components/Priority/Priorities";
 const Usersimages = [
   {
     id: 1,
@@ -35,6 +36,7 @@ function Ui() {
       <Button>ورود</Button>
       <Input />
       <InputCard />
+      <Priorities color="blue"/>
     </div>
   );
 }
