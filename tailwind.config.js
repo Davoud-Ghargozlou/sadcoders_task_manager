@@ -10,6 +10,7 @@ export default {
       serif:["Estedad"],
     },
     extend: {
+     
       width:{
         '100':'34rem'
       },
@@ -18,7 +19,7 @@ export default {
           100:"#ffdada",
         },
         blue:{
-          100:"#4339F2"
+          200:"#3758F9"
         },
         red:{
           100:"#FF3838"
@@ -28,8 +29,8 @@ export default {
         },
         green:{
           100:"#1AD698"
-        }
-      }
+        },
+      },
     },
   },
   plugins: [],
