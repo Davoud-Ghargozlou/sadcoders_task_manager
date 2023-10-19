@@ -16,6 +16,18 @@ export default {
       colors:{
         primary:{
           100:"#ffdada",
+        },
+        blue:{
+          100:"#4339F2"
+        },
+        red:{
+          100:"#FF3838"
+        },
+        purple:{
+          100:"#891BE8"
+        },
+        green:{
+          100:"#1AD698"
         }
       }
     },
