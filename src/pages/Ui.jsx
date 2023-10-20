@@ -11,6 +11,7 @@ import attach from "../../src/assets/images/attach-outline.svg";
 import heart from "../../src/assets/images/heart-outline.svg";
 import message from "../../src/assets/images/message-square-outline.svg";
 import Priorities from "../components/Priority/Priorities";
+import SingleUser from "../components/Users/SingleUser";
 const Usersimages = [
   {
     id: 1,
@@ -50,6 +51,7 @@ function Ui() {
   ];
   return (
     <div>
+      <SingleUser/>
       <Users UsersList={Usersimages} />
       <Button>ورود</Button>
       <Input />
