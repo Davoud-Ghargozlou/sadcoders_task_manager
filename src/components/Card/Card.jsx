@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../UI/Button';
 
 function Card() {
     return (
@@ -10,10 +11,14 @@ function Card() {
               comments
             </h2>
           </div>
-          <button className="w-40 h-12 border-2 flex justify-center items-center border-blue-400 rounded">
+          {/* <button className="w-40 h-12 border-2 flex justify-center items-center border-blue-400 rounded">
             <img src="public/Group (1).svg" />
             Add comment
-          </button>
+          </button> */}
+          <Button variant="one" size="lg">
+            <img src='public/Group (1).svg'/>
+            <p className='text-base text-[#3758F9]'>Add comment</p>
+          </Button>
         </header>
         <textarea
           className=" w-[857px] h-[100px] p-[20px] rounded-md"
