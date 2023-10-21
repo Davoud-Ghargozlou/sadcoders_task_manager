@@ -13,6 +13,8 @@ import message from "../../src/assets/images/message-square-outline.svg";
 import Priorities from "../components/Priority/Priorities";
 import ImgMediaCard from "../components/Card/Add-Card";
 import Card from "../components/Card/Card";
+import Header from "../components/Header/Header";
+
 const Usersimages = [
   {
     id: 1,
@@ -35,6 +37,7 @@ const Usersimages = [
     className: "h-[30px] w-[30px] -ml-[13px]",
   },
 ];
+
 function Ui() {
   const IconList = [
     {
@@ -53,14 +56,15 @@ function Ui() {
   return (
     <div>
       <ImgMediaCard />
+      <Header />
       <Users UsersList={Usersimages} />
       <Button>ورود</Button>
       <Input />
       <InputCard />
-      <Add-Icon />
+      {/* <Add-Icon /> */}
       {/* IconList.map((item,index)=><Icon key={index} Icon={item.url} cont={item.count} />) */}
       <Priorities color="blue" />
-      <Card/>
+      <Card />
     </div>
   );
 }
