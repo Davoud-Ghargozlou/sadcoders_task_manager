@@ -6,13 +6,14 @@ import Users from "../components/Users/Users";
 import Button from "../components/UI/Button";
 import Input from "../components/Input/Input";
 import InputCard from "../components/Input/InputCard";
-<<<<<<< HEAD
 import Icon from "../components/UI/Icon/Icon";
 import attach from "../../src/assets/images/attach-outline.svg";
 import heart from "../../src/assets/images/heart-outline.svg";
 import message from "../../src/assets/images/message-square-outline.svg";
 import Priorities from "../components/Priority/Priorities";
 import Card from "../components/Card/Card";
+import Header from "../components/Header/Header";
+
 const Usersimages = [
   {
     id: 1,
@@ -35,10 +36,7 @@ const Usersimages = [
     className: "h-[30px] w-[30px] -ml-[13px]",
   },
 ];
-=======
-import Header from "../components/Header/Header";
 
->>>>>>> creating-header
 function Ui() {
   const IconList = [
     {
@@ -56,19 +54,15 @@ function Ui() {
   ];
   return (
     <div>
-<<<<<<< HEAD
-      <Users UsersList={Usersimages} />
-=======
       <Header />
-      <Users />
->>>>>>> creating-header
+      <Users UsersList={Usersimages} />
       <Button>ورود</Button>
       <Input />
       <InputCard />
-      <Add-Icon />
+      {/* <Add-Icon /> */}
       {/* IconList.map((item,index)=><Icon key={index} Icon={item.url} cont={item.count} />) */}
       <Priorities color="blue" />
-      <Card/>
+      <Card />
     </div>
   );
 }
