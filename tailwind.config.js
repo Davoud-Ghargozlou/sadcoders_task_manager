@@ -19,6 +19,7 @@ export default {
           100:"#ffdada",
         },
         blue:{
+          100: "#4339F2",
           200:"#3758F9"
         },
         red:{

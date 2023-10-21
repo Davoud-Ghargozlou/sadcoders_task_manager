@@ -1,16 +1,12 @@
-const Priorities = ({ color }) => {
-  const colors = {
-    blue: "bg-blue-100",
-    red: "bg-red-100",
-    purple: "bg-purple-100",
-    green: "bg-green-100",
-  };
+import SinglePriority from "./SinglePriority";
+
+const Priorities = () => {
   return (
     <div className="flex gap-2">
-      <div className={`w-[60px] h-2 rounded ${colors[color]}`}></div>
-      <div className={`w-[60px] h-2 rounded ${colors[color]}`}></div>
-      <div className={`w-[60px] h-2 rounded ${colors[color]}`}></div>
-      <div className={`w-[60px] h-2 rounded ${colors[color]}`}></div>
+      <SinglePriority color="blue" />
+      <SinglePriority color="purple" />
+      <SinglePriority color="green" />
+      <SinglePriority color="red" />
     </div>
   );
 };

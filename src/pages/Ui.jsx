@@ -11,6 +11,7 @@ import attach from "../../src/assets/images/attach-outline.svg";
 import heart from "../../src/assets/images/heart-outline.svg";
 import message from "../../src/assets/images/message-square-outline.svg";
 import Priorities from "../components/Priority/Priorities";
+import SingleUser from "../components/Users/SingleUser";
 import Card from "../components/Card/Card";
 import Header from "../components/Header/Header";
 
@@ -54,6 +55,7 @@ function Ui() {
   ];
   return (
     <div>
+      <SingleUser />
       <Header />
       <Users UsersList={Usersimages} />
       <Button>ورود</Button>
