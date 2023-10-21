@@ -6,6 +6,7 @@ import Users from "../components/Users/Users";
 import Button from "../components/UI/Button";
 import Input from "../components/Input/Input";
 import InputCard from "../components/Input/InputCard";
+<<<<<<< HEAD
 import Icon from "../components/UI/Icon/Icon";
 import attach from "../../src/assets/images/attach-outline.svg";
 import heart from "../../src/assets/images/heart-outline.svg";
@@ -34,6 +35,10 @@ const Usersimages = [
     className: "h-[30px] w-[30px] -ml-[13px]",
   },
 ];
+=======
+import Header from "../components/Header/Header";
+
+>>>>>>> creating-header
 function Ui() {
   const IconList = [
     {
@@ -51,7 +56,12 @@ function Ui() {
   ];
   return (
     <div>
+<<<<<<< HEAD
       <Users UsersList={Usersimages} />
+=======
+      <Header />
+      <Users />
+>>>>>>> creating-header
       <Button>ورود</Button>
       <Input />
       <InputCard />
