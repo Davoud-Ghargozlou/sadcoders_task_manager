@@ -11,6 +11,7 @@ import attach from "../../src/assets/images/attach-outline.svg";
 import heart from "../../src/assets/images/heart-outline.svg";
 import message from "../../src/assets/images/message-square-outline.svg";
 import Priorities from "../components/Priority/Priorities";
+import ImgMediaCard from "../components/Card/Add-Card";
 import Card from "../components/Card/Card";
 const Usersimages = [
   {
@@ -51,6 +52,7 @@ function Ui() {
   ];
   return (
     <div>
+      <ImgMediaCard />
       <Users UsersList={Usersimages} />
       <Button>ورود</Button>
       <Input />
