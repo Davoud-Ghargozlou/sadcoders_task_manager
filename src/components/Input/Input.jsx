@@ -1,6 +1,7 @@
 import Button from "../UI/Button";
 import InputCard from "./InputCard";
 import LogoIcon from '@/assets/images/LogoiCON.svg'
+import shape from '@/assets/images/shapes.svg'
 
 const Info = [
   { name: "Username",type:"text" },
@@ -34,7 +35,9 @@ function Input() {
         </div>
         </div>
       </section>
-      <div className=" basis-1/2	bg-[#3758F9]"></div>
+      <div className=" basis-1/2">
+        <img src={shape} />
+      </div>
       </div>
       </div>
     );
