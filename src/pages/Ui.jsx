@@ -56,14 +56,17 @@ function Ui() {
   ];
   return (
     <div>
-      <ImgMediaCard />
+      <div className="grid grid-cols-4 mt-8">
+        <ImgMediaCard />
+      </div>
+
       <SingleUser />
       <Header />
       <Users UsersList={Usersimages} />
       <Button>ورود</Button>
       <Input />
       <InputCard />
-      {/* <Add-Icon /> */}
+      <Add-Icon />
       {/* IconList.map((item,index)=><Icon key={index} Icon={item.url} cont={item.count} />) */}
       <Priorities color="blue" />
       <Card />
