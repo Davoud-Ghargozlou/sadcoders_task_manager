@@ -1,5 +1,6 @@
 import Button from "../UI/Button";
 import InputCard from "./InputCard";
+import LogoIcon from '@/assets/images/LogoiCON.svg'
 
 const Info = [
   { name: "Username",type:"text" },
@@ -10,14 +11,14 @@ function Input() {
 
     return (
       <div className="flex flex-col items-center py-[2rem] ">
-        <img src="public/Logo (1).svg" className="pb-[56px]"/>
+        <img src={LogoIcon} className="pb-[56px]"/>
     <div className="w-[1170px] h-[550px]  flex " >
       
       <section className=" w-[585px] h-[550px] flex flex-col bg-gray-300 pb-[79px] pt-[75px] pl-[92px] pr-[92px] basis-1/2	 ">
         <h1 className="text-[30px] font-bold leading-[38px] text-[#212B36] pb-[40px]">Sign In</h1>
         {Info.map((item) => {
           return(
-              <InputCard key={item.name}  text={item.name} placeholder={item.placeholder}>
+              <InputCard key={item.name}  text={item.name} placeholder={item.placeholder} type={item.type}>
                  
               </InputCard>
           )
