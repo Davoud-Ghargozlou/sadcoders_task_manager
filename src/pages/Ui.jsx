@@ -15,6 +15,7 @@ import ImgMediaCard from "../components/Card/Add-Card";
 import SingleUser from "../components/Users/SingleUser";
 import Card from "../components/Card/Card";
 import Header from "../components/Header/Header";
+import P404 from "./P404";
 
 const Usersimages = [
   {
@@ -61,6 +62,7 @@ function Ui() {
       </div>
 
       <SingleUser />
+      <P404/>
       <Header />
       <Users UsersList={Usersimages} />
       <Button>ورود</Button>
