@@ -1,10 +1,10 @@
-import logo from "../../assets/images/Logo.svg";
-import board from "../../assets/images/boards.svg";
-import search from "../../assets/images/search.svg";
-import plus from "../../assets/images/plus-circle-outline.svg";
-import alert from "../../assets/images/alert-circle-outline.svg";
-import bell from "../../assets/images/bell-outline.svg";
-import user from "../../assets/images/main-user.png";
+import logo from "@/assets/images/Logo.svg";
+import board from "@/assets/images/boards.svg";
+import search from "@/assets/images/search.svg";
+import plus from "@/assets/images/plus-circle-outline.svg";
+import alert from "@/assets/images/alert-circle-outline.svg";
+import bell from "@/assets/images/bell-outline.svg";
+import user from "@/assets/images/main-user.png";
 
 function Header() {
   return (

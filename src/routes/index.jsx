@@ -1,8 +1,9 @@
-import Auth from "../pages/Auth";
 import { createBrowserRouter } from "react-router-dom";
-import Ui from "../pages/Ui";
-import Input from "../components/Input/Input";
-import Home from "../pages/Index";
+import Auth from "@/pages/Auth";
+import Ui from "@/pages/Ui";
+import Input from "@/components/Input/Input";
+import Home from "@/pages/index";
+import TaskPage from "@/pages/TaskPage";
 const routes = [
   {
     path: "/Login",
@@ -19,6 +20,10 @@ const routes = [
   {
     path: "/ui",
     element: <Ui />,
+  },
+  {
+    path: "/Task",
+    element: <TaskPage/>
   },
 ];
 const router = createBrowserRouter(routes);

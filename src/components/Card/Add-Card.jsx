@@ -1,13 +1,12 @@
 import * as React from "react";
-import Usericon4 from "/src/assets/images/User4.png";
-import Usericon5 from "/src/assets/images/User5.png";
-import AddUser from "/src/assets/images/adduser.png";
-import imgpost1 from "/src/assets/images/imgpost1.png";
-import Users from "/src/components/Users/Users";
-import SinglePriority from "../Priority/SinglePriority";
-import attach from "/src/assets/images/attach-outline.svg";
-import heart from "/src/assets/images/heart-outline.svg";
-import message from "/src/assets/images/message-square-outline.svg";
+import Usericon4 from "@/assets/images/User4.png";
+import Usericon5 from "@/assets/images/User5.png";
+import AddUser from "@/assets/images/adduser.png";
+import imgpost1 from "@/assets/images/imgpost1.png";
+import Users from "@/components/Users/Users";
+import attach from "@/assets/images/attach-outline.svg";
+import heart from "@/assets/images/heart-outline.svg";
+import message from "@/assets/images/message-square-outline.svg";
 
 const Usersimages = [
   {
