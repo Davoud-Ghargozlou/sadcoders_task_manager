@@ -1,5 +1,4 @@
-import Button from "../UI/Button";
-import InputCard from "./InputCard";
+import InputCard from "@/components/Input/InputCard";
 import LogoIcon from '@/assets/images/LogoiCON.svg'
 import shape from '@/assets/images/shapes.svg'
 

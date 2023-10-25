@@ -1,4 +1,4 @@
-import SinglePriority from "./SinglePriority";
+import SinglePriority from "@/components/Priority/SinglePriority";
 
 const Priorities = () => {
   return (
