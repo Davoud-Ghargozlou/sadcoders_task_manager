@@ -28,14 +28,14 @@ const Usersimages = [
 ];
 const ImgMediaCard = () => {
   return (
-    <div className="flex flex-col p-4 rounded-lg bg-[#F4F4F4] m-5 ">
-      <img src={imgpost1} />
-      <div className="flex gap-2 mt-5">
+    <div className="flex flex-col p-4 rounded-lg bg-[#F4F4F4] mr-[30px] ">
+      {/* <img src={imgpost1} /> */}
+      {/* <div className="flex gap-2 mt-5">
         <SinglePriority color="blue" />
         <SinglePriority color="purple" />
         <SinglePriority color="green" />
         <SinglePriority color="red" />
-      </div>
+      </div> */}
       <h1 className="font-bold text-lg">The Amazing Hubble</h1>
       <p className="text-gray-400">
         Color is so powerful that it can persuade, motivate.
@@ -44,13 +44,13 @@ const ImgMediaCard = () => {
         <div className="">
           <Users UsersList={Usersimages} />
         </div>
-        <div className="flex">
+        {/* <div className="flex">
           <span className="text-black">
           </span>
           <img src={attach} alt="" />
           <img src={heart} alt="" />
           <img src={message} alt="" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

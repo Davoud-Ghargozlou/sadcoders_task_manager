@@ -8,7 +8,7 @@ import user from "../../assets/images/main-user.png";
 
 function Header() {
   return (
-    <div className="h-14 p-3 flex items-center border-solid border-b-2 border-b-gray-950 border-opacity-5">
+    <div className="h-14 p-3 flex items-center border-solid border-b-2 border-b-gray-950 border-opacity-5 px-7">
       <img src={logo} className="w-[73px]" />
       <span className="ml-2 h-8 border-solid border-l-2 border-b-gray-950 border-opacity-5" />
       <img src={board} className=" mx-2 w-6" />
