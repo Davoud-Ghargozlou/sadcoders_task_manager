@@ -16,6 +16,7 @@ import SingleUser from "../components/Users/SingleUser";
 import Card from "../components/Card/Card";
 import Header from "../components/Header/Header";
 import P404 from "./P404";
+import NewCard from "@/components/NewCard";
 
 const Usersimages = [
   {
@@ -72,8 +73,10 @@ function Ui() {
       {/* IconList.map((item,index)=><Icon key={index} Icon={item.url} cont={item.count} />) */}
       <Priorities color="blue" />
       <Card />
+      <NewCard />
     </div>
   );
+
 }
 
 export default Ui;
