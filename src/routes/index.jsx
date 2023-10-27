@@ -5,6 +5,7 @@ import Home from "@/pages/index";
 import P404 from "@/pages/P404";
 import TaskPage from "@/pages/TaskPage";
 import Layout from "@/components/Layout";
+import Cardpage from "@/pages/Cardpage";
 const routes = [
   {
     path: "/",
@@ -25,6 +26,10 @@ const routes = [
       {
         path: "/Task",
         element: <TaskPage />,
+      },
+      {
+        path: "/Card",
+        element: <Cardpage/>,
       },
     ],
   },
