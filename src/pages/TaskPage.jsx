@@ -33,7 +33,6 @@ const TaskPage = () => {
       ];
   return (
     <>
-    <Header/>
     <div className='flex justify-between px-7'>
     <div className='flex items-center'>
         <span className='pr-20'>Brackets</span>
