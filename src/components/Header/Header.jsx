@@ -5,6 +5,7 @@ import plus from "@/assets/images/plus-circle-outline.svg";
 import alert from "@/assets/images/alert-circle-outline.svg";
 import bell from "@/assets/images/bell-outline.svg";
 import user from "@/assets/images/main-user.png";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -29,7 +30,9 @@ function Header() {
         <img src={plus} />
         <img src={alert} />
         <img src={bell} />
+        <Link to="/auth">
         <img src={user} />
+        </Link>
       </div>
     </div>
   );
