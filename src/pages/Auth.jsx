@@ -58,7 +58,7 @@ const Auth = () => {
             onChange={getvaluepass}
             placeholder="Your password"
           />
-          <Link to={login ? "/" : "/auth"}>
+          <Link to={login && "/"}>
             <button
               onClick={loginuser}
               className="w-[400px] bg-[#3758F9] rounded-[6px] h-[50px] py-[13px] px-[28px]"

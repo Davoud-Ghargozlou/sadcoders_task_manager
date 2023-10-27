@@ -6,7 +6,6 @@ import { Link } from "react-router-dom"
 const Homepage = () => {
   return (
     <div>
-    <Header/>
     <div className="px-7">
     <div className="flex justify-between w-screen   mt-9 mb-4">
       <span>Recentley viwed</span>
