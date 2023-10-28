@@ -2,11 +2,11 @@ import InputCard from "@/components/Input/InputCard";
 import LogoIcon from "@/assets/images/LogoiCON.svg";
 import shape from "@/assets/images/shapes.svg";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Auth = () => {
+  const navigate = useNavigate()
   const [value, setValue] = useState("");
   const [valuepass, setValuepass] = useState("");
-  const [login, setLogin] = useState(false);
   const getvalue = (e) => {
     setValue(e.target.value);
   };
@@ -28,7 +28,7 @@ const Auth = () => {
       pass: valuepass,
     };
     if (value == "ali" && valuepass == "hassan") {
-      setLogin(true)
+      navigate('/')
     } 
   };
   return (
@@ -58,14 +58,12 @@ const Auth = () => {
             onChange={getvaluepass}
             placeholder="Your password"
           />
-          <Link to={login && "/"}>
             <button
               onClick={loginuser}
               className="w-[400px] bg-[#3758F9] rounded-[6px] h-[50px] py-[13px] px-[28px]"
             >
               Sign In
             </button>
-            </Link>
           <div className="flex items-center pt-[40px]">
             <h3 className="text-[16px] font-medium m-0 not-italic text-[#637381]">
               forget password?
