@@ -1,19 +1,26 @@
 import PropTypes from "prop-types";
 
-const Button = ({ children, variant, size, ...props }) => {
+const Button = ({
+  children,
+  variant = "fill",
+  size = "md",
+  type = "button",
+  ...props
+}) => {
   const variants = {
-    fill: "rounded-md text-blue-200 border border-blue-200 ",
-    outline: "rounded-md text-white bg-blue-200",
-    one:"border border-[#3758F9] rounded flex justify-center items-center"
+    outline: "rounded-md text-blue-200 border border-blue-200 ",
+    fill: "rounded-md text-white bg-blue-200",
+    one: "border border-[#3758F9] rounded flex justify-center items-center",
   };
   const sizes = {
     sm: "py-3 px-7",
     md: "py-3 px-7 ",
-    lg:"w-[184px] h-[48px] py-[12px] px-[24px]"
+    lg: "w-[184px] h-[48px] py-[12px] px-[24px]",
   };
   return (
     <button
-      className={`ml-4  rounded-md ${variants[variant]} ${sizes[size]}`}
+      type={type}
+      className={`rounded-md ${variants[variant]} ${sizes[size]}`}
       {...props}
     >
       {children}
@@ -22,9 +29,10 @@ const Button = ({ children, variant, size, ...props }) => {
 };
 
 Button.propTypes = {
+  type: PropTypes.string,
   children: PropTypes.string,
-  variant: PropTypes.oneOf(["fill", "outline","one"]),
-  size: PropTypes.oneOf(["sm", "md","lg"]),
+  variant: PropTypes.oneOf(["fill", "outline", "one"]),
+  size: PropTypes.oneOf(["sm", "md", "lg"]),
 };
 
 export default Button;

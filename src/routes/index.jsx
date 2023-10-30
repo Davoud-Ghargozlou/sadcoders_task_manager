@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 import Auth from "@/pages/Auth";
 import Ui from "@/pages/Ui";
 import Home from "@/pages/index";
@@ -6,6 +6,7 @@ import P404 from "@/pages/P404";
 import TaskPage from "@/pages/TaskPage";
 import Layout from "@/components/Layout";
 import Cardpage from "@/pages/Cardpage";
+
 const routes = [
   {
     path: "/",
@@ -25,13 +26,21 @@ const routes = [
       },
       {
         path: "/Card",
-        element: <Cardpage/>,
+        element: <Cardpage />,
       },
     ],
   },
   {
-    path: "/Auth",
-    element: <Auth />,
+    path: "/auth",
+    element: <Navigate to="/auth/sign-in" />,
+  },
+  {
+    path: "/auth/sign-up",
+    element: <Auth key="sign-up" mode="sign-up" />,
+  },
+  {
+    path: "/auth/sign-in",
+    element: <Auth key="sign-in" mode="sign-in" />,
   },
   {
     path: "*",
