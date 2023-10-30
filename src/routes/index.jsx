@@ -16,10 +16,6 @@ const routes = [
         element: <Home />,
       },
       {
-        path: "/Auth",
-        element: <Auth />,
-      },
-      {
         path: "/ui",
         element: <Ui />,
       },
@@ -32,6 +28,10 @@ const routes = [
         element: <Cardpage/>,
       },
     ],
+  },
+  {
+    path: "/Auth",
+    element: <Auth />,
   },
   {
     path: "*",
