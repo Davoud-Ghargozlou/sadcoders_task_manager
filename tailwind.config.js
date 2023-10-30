@@ -24,6 +24,7 @@ export default {
         },
         red: {
           100: "#FF3838",
+          500: "#F23030",
         },
         purple: {
           100: "#891BE8",

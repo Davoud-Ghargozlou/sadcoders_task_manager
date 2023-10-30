@@ -10,6 +10,7 @@ function InputCard({
   type = "text",
   onChange,
   name,
+  error,
 }) {
   const localId = useId();
   const [localType, setLocalType] = useState(type);
@@ -33,7 +34,9 @@ function InputCard({
           value={value}
           onChange={onChange}
           placeholder={placeholder}
-          className="w-full outline-none bg-white py-3 px-4 rounded-md flex-grow border border-transparent focus:border-gray-900"
+          className={`w-full outline-none bg-white py-3 px-4 rounded-md flex-grow border focus:border-gray-900 ${
+            error ? "border-red-500" : "border-transparent"
+          }`}
         />
         {type === "password" && (
           <button
@@ -49,11 +52,14 @@ function InputCard({
           </button>
         )}
       </div>
+
+      {error && <div className="mt-2 text-sm text-red-500">{error}</div>}
     </div>
   );
 }
 
 InputCard.propTypes = {
+  error: PropType.string,
   name: PropType.string,
   label: PropType.node,
   value: PropType.string,

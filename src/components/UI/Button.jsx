@@ -5,6 +5,7 @@ const Button = ({
   variant = "fill",
   size = "md",
   type = "button",
+  loading = false,
   ...props
 }) => {
   const variants = {
@@ -20,15 +21,17 @@ const Button = ({
   return (
     <button
       type={type}
-      className={`rounded-md ${variants[variant]} ${sizes[size]}`}
+      disabled={loading}
+      className={`rounded-md disabled:opacity-70 ${variants[variant]} ${sizes[size]}`}
       {...props}
     >
-      {children}
+      {loading ? "loading..." : children}
     </button>
   );
 };
 
 Button.propTypes = {
+  loading: PropTypes.bool,
   type: PropTypes.string,
   children: PropTypes.string,
   variant: PropTypes.oneOf(["fill", "outline", "one"]),
