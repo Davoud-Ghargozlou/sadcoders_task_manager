@@ -4,7 +4,7 @@ import Ui from "@/pages/Ui";
 import Home from "@/pages/index";
 import P404 from "@/pages/P404";
 import TaskPage from "@/pages/TaskPage";
-import Layout from "@/components/Layout";
+import Layout from "@/pages/Layout";
 import Cardpage from "@/pages/Cardpage";
 
 const routes = [
