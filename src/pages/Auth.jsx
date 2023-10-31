@@ -1,86 +1,52 @@
-import InputCard from "@/components/Input/InputCard";
 import LogoIcon from "@/assets/images/LogoiCON.svg";
-import shape from "@/assets/images/shapes.svg";
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-const Auth = () => {
-  const navigate = useNavigate()
-  const [value, setValue] = useState("");
-  const [valuepass, setValuepass] = useState("");
-  const getvalue = (e) => {
-    setValue(e.target.value);
-  };
-  const getvaluepass = (e) => {
-    setValuepass(e.target.value);
-  };
-  const Info = [
-    { name: "Username", type: "text", index: 1 },
-    {
-      name: "Password",
-      placeholder: "Your password",
-      type: "password",
-      index: 0,
-    },
-  ];
-  const loginuser = () => {
-    const smth = {
-      user: value,
-      pass: valuepass,
-    };
-    if (value == "ali" && valuepass == "hassan") {
-      navigate('/')
-    } 
-  };
+import authBgUrl from "@/assets/images/auth-bg.png";
+import SignIn from "@/components/Auth/SignIn";
+import SignUp from "@/components/Auth/SignUp";
+import { Link } from "react-router-dom";
+
+const Auth = ({ mode = "sign-in" }) => {
   return (
-    <div className="flex flex-col items-center py-[2rem] ">
-      <img src={LogoIcon} className="pb-[56px]" />
-      <div className="w-[1170px] h-[550px]  flex ">
-        <section className=" w-[585px] h-[550px] flex flex-col bg-gray-300 pb-[79px] pt-[75px] pl-[92px] pr-[92px] basis-1/2	 ">
-          <h1 className="text-[30px] font-bold leading-[38px] text-[#212B36] pb-[40px]">
-            Sign In
+    <div className="flex flex-col items-center p-8">
+      <img src={LogoIcon} className="mb-8 md:mb-14" />
+
+      <div className="w-full max-w-6xl flex flex-col-reverse md:flex-row rounded-lg overflow-hidden">
+        <section className="basis-1/2 flex flex-col bg-gray-300 py-8 px-6 md:py-20 md:px-24">
+          <h1 className="text-3xl font-bold text-[#212B36] mb-4 md:mb-8">
+            {mode === "sign-in" ? "Sign In" : "Sign Up"}
           </h1>
-          {/* {Info.map((item) => {
-            return (
-              <InputCard
-                key={item.name}
-                text={item.name}
-                placeholder={item.placeholder}
-                type={item.type}
-                value={item.index? value.user : value.pass}
-                onChange={getvalue}
-              ></InputCard>
-            );
-          })} */}
-          <InputCard text="Username" value={value} onChange={getvalue} />
-          <InputCard
-            text="Password"
-            value={valuepass}
-            onChange={getvaluepass}
-            placeholder="Your password"
-          />
-            <button
-              onClick={loginuser}
-              className="w-[400px] bg-[#3758F9] rounded-[6px] h-[50px] py-[13px] px-[28px]"
-            >
-              Sign In
-            </button>
-          <div className="flex items-center pt-[40px]">
-            <h3 className="text-[16px] font-medium m-0 not-italic text-[#637381]">
+
+          {mode === "sign-in" ? <SignIn /> : <SignUp />}
+
+          <div className="flex flex-wrap justify-between gap-x-8 gap-y-2 items-center pt-10">
+            <h3 className="font-medium m-0 not-italic text-[#637381]">
               forget password?
             </h3>
-            <div className="flex items-center">
-              <h3 className="text-[16px] text-[#637381] pl-[23px]">
-                Don't have an account?
-              </h3>
-              <a href="#" className="text-[#3758F9]">
-                {" "}
-                Sign Up
-              </a>
-            </div>
+
+            {mode === "sign-in" ? (
+              <div className="flex gap-1 items-center whitespace-nowrap">
+                <h3 className="text-gray-400">Don't have an account?</h3>
+
+                <Link to={"/auth/sign-up"} className="text-blue-200">
+                  Sign up
+                </Link>
+              </div>
+            ) : (
+              <div className="flex gap-1 items-center whitespace-nowrap">
+                <h3 className="text-gray-400">Already have account?</h3>
+
+                <Link to={"/auth/sign-in"} className="text-blue-200">
+                  Sign in
+                </Link>
+              </div>
+            )}
           </div>
         </section>
-        <div className=" basis-1/2">
-          <img src={shape} />
+
+        <div className="basis-1/2 relative min-h-[180px]">
+          <img
+            src={authBgUrl}
+            className="absolute h-full w-full object-cover object-left-bottom"
+          />
         </div>
       </div>
     </div>
