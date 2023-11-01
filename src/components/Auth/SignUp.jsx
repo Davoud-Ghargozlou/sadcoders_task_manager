@@ -3,10 +3,10 @@ import { useState } from "react";
 import { signUpSchema } from "./schema";
 import Button from "@/components/UI/Button";
 import InputCard from "@/components/Input/InputCard";
-import { useNavigate } from "react-router-dom";
+import { useAuthContext } from "@/providers/AuthProvider";
 
 const SignUp = () => {
-  const navigate = useNavigate();
+  const { saveAccessToken } = useAuthContext();
   const [unknownError, setUnknownError] = useState(null);
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
@@ -43,8 +43,7 @@ const SignUp = () => {
         data
       );
 
-      localStorage.setItem("accessToken", result.data.token.accessToken);
-      navigate("/");
+      saveAccessToken(result.data.token.accessToken);
     } catch (error) {
       console.log(error);
       setUnknownError("Something wrong, please try again.");
