@@ -14,7 +14,7 @@ const Button = ({
     one: "border border-[#3758F9] rounded flex justify-center items-center",
   };
   const sizes = {
-    sm: "py-3 px-7",
+    sm: "py-1 px-4",
     md: "py-3 px-7 ",
     lg: "w-[184px] h-[48px] py-[12px] px-[24px]",
   };

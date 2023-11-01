@@ -3,8 +3,10 @@ import { useState } from "react";
 import { signUpSchema } from "./schema";
 import Button from "@/components/UI/Button";
 import InputCard from "@/components/Input/InputCard";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+  const navigate = useNavigate();
   const [unknownError, setUnknownError] = useState(null);
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
@@ -19,8 +21,8 @@ const SignUp = () => {
     setFormData((s) => ({ ...s, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
     if (loading) return;
 
@@ -29,7 +31,7 @@ const SignUp = () => {
     const { success, error, data } = signUpSchema.safeParse(formData);
 
     if (!success) {
-      setErrors(error.format());
+      setErrors(error.flatten().fieldErrors);
       return;
     }
 
@@ -41,7 +43,8 @@ const SignUp = () => {
         data
       );
 
-      console.log(result);
+      localStorage.setItem("accessToken", result.data.token.accessToken);
+      navigate("/");
     } catch (error) {
       console.log(error);
       setUnknownError("Something wrong, please try again.");
@@ -57,7 +60,7 @@ const SignUp = () => {
         value={formData.username}
         onChange={updateFormData}
         placeholder="Your username"
-        error={errors.username?._errors[0]}
+        error={errors.username?.[0]}
       />
 
       <InputCard
@@ -67,7 +70,7 @@ const SignUp = () => {
         value={formData.password}
         onChange={updateFormData}
         placeholder="Your password"
-        error={errors.password?._errors[0]}
+        error={errors.password?.[0]}
       />
 
       <InputCard
@@ -77,7 +80,7 @@ const SignUp = () => {
         value={formData.confirm_password}
         onChange={updateFormData}
         placeholder="Your password again"
-        error={errors.confirm_password?._errors[0]}
+        error={errors.confirm_password?.[0]}
       />
 
       <Button type="submit" loading={loading}>
