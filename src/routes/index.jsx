@@ -32,7 +32,7 @@ const routes = [
   },
   {
     path: "/auth",
-    element: <Navigate to="/auth/sign-in" />,
+    element: <Navigate to="/auth/sign-in" replace />,
   },
   {
     path: "/auth/sign-up",
