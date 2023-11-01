@@ -2,10 +2,15 @@ import LogoIcon from "@/assets/images/LogoiCON.svg";
 import authBgUrl from "@/assets/images/auth-bg.png";
 import SignIn from "@/components/Auth/SignIn";
 import SignUp from "@/components/Auth/SignUp";
-import { Link } from "react-router-dom";
+import { useAuthContext } from "@/providers/AuthProvider";
+import { Link, Navigate } from "react-router-dom";
 
 const Auth = ({ mode = "sign-in" }) => {
-  return (
+  const { isLoggedIn } = useAuthContext();
+
+  return isLoggedIn ? (
+    <Navigate to="/" />
+  ) : (
     <div className="flex flex-col items-center p-8">
       <img src={LogoIcon} className="mb-8 md:mb-14" />
 

@@ -10,9 +10,9 @@ import { useAuthContext } from "@/providers/AuthProvider";
 import Button from "../UI/Button";
 
 function Header() {
-  const { isLoggedIn } = useAuthContext();
+  const { isLoggedIn, currentUser, logout } = useAuthContext();
 
-  console.log(isLoggedIn);
+  console.log(currentUser);
 
   return (
     <div className="h-14 p-3 flex items-center border-solid border-b-2 border-b-gray-950 border-opacity-5 px-7">
@@ -21,7 +21,7 @@ function Header() {
       <img src={board} className=" mx-2 w-6" />
       <h1 className="">Boards</h1>
       <span className="ml-2 h-8 border-solid border-l-2 border-b-gray-950 border-opacity-5" />
-      <div className="relative w-[512px] m-2">
+      <div className="relative m-2">
         <input
           type="text"
           className="w-full h-7 bg-slate-100 rounded-3xl pl-8 outline-none focus:border-blue-100 focus:ring focus:ring-blue-100"
@@ -37,8 +37,11 @@ function Header() {
           <img src={plus} />
           <img src={alert} />
           <img src={bell} />
+          <Button size="sm" variant="outline" onClick={() => logout()}>
+            Logout
+          </Button>
           <Link to="/profile">
-            <img src={user} />
+            <img className="w-10 h-10 rounded-full" src={currentUser?.avatar} />
           </Link>
         </div>
       ) : (
