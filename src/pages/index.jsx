@@ -1,3 +1,4 @@
+import Board from "@/components/Board"
 import ImgMediaCard from "@/components/Card/Add-Card"
 import CardList from "@/components/Card/CardList"
 import Header from "@/components/Header/Header"
@@ -5,8 +6,8 @@ import { Link } from "react-router-dom"
 
 const Homepage = () => {
   return (
-    <div>
-    <div className="px-7">
+    <div className="p-7">
+    {/* <div className="px-7">
     <div className="flex justify-between w-screen   mt-9 mb-4">
       <span>Recentley viwed</span>
       <span>Menu</span>
@@ -27,7 +28,11 @@ const Homepage = () => {
       <span>Completed</span>
     </div>
     <CardList/>
-    </div>
+    </div> */}
+    <Board text="To Do" color="blue"/>
+    <Board text="Doing" color="orange"/>
+    <Board text="Tasks" color="red"/>
+    <Board text="School" color="green"/>
     </div>
   )
 }
