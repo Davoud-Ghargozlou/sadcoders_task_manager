@@ -17,6 +17,7 @@ import Card from "../components/Card/Card";
 import Header from "../components/Header/Header";
 import P404 from "./P404";
 import NewCard from "@/components/NewCard";
+import Board from "@/components/Board";
 
 const Usersimages = [
   {
@@ -58,6 +59,7 @@ function Ui() {
   ];
   return (
     <div>
+      <Board text="To Do " color="blue"/>
       <div className="grid grid-cols-4 mt-8">
         <ImgMediaCard />
       </div>
