@@ -37,9 +37,11 @@ function Header() {
           <img src={plus} />
           <img src={alert} />
           <img src={bell} />
+          <Link to="/">
           <Button size="sm" variant="outline" onClick={() => logout()}>
             Logout
           </Button>
+          </Link>
           <Link to="/profile">
             <img className="w-10 h-10 rounded-full" src={currentUser?.avatar} />
           </Link>

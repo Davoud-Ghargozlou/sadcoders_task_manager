@@ -7,7 +7,6 @@ const Board = ({ text, color }) => {
     orange: "bg-orange-300",
     blue: "bg-blue-400",
     green: "bg-green-400",
-    dashed: "border border-dashed border-slate-400",
   };
   return (
     <div
