@@ -5,13 +5,13 @@ import plus from "@/assets/images/plus-circle-outline.svg";
 import alert from "@/assets/images/alert-circle-outline.svg";
 import bell from "@/assets/images/bell-outline.svg";
 import user from "@/assets/images/main-user.png";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useAuthContext } from "@/providers/AuthProvider";
 import Button from "../UI/Button";
 
 function Header() {
   const { isLoggedIn, currentUser, logout } = useAuthContext();
-
+  const {userId} = useParams();
   console.log(currentUser);
 
   return (
@@ -19,7 +19,7 @@ function Header() {
       <img src={logo} className="w-[73px]" />
       <span className="ml-2 h-8 border-solid border-l-2 border-b-gray-950 border-opacity-5" />
       <img src={board} className=" mx-2 w-6" />
-      <h1 className="">Boards</h1>
+      <h1 className="">{userId}</h1>
       <span className="ml-2 h-8 border-solid border-l-2 border-b-gray-950 border-opacity-5" />
       <div className="relative m-2">
         <input
