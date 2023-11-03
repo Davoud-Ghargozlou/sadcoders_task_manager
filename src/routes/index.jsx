@@ -21,11 +21,11 @@ const routes = [
         element: <Ui />,
       },
       {
-        path: "/Task",
+        path: "/task",
         element: <TaskPage />,
       },
       {
-        path: "/Card",
+        path: "/card/:userId",
         element: <Cardpage />,
       },
     ],
