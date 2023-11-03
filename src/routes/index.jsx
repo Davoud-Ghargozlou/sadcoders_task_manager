@@ -6,6 +6,7 @@ import P404 from "@/pages/P404";
 import TaskPage from "@/pages/TaskPage";
 import Layout from "@/pages/Layout";
 import Cardpage from "@/pages/Cardpage";
+import HomeUser from "@/pages/HomeUser";
 
 const routes = [
   {
@@ -15,6 +16,10 @@ const routes = [
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/home",
+        element: <HomeUser/>,
       },
       {
         path: "/ui",

@@ -4,7 +4,7 @@ import { createContext, useState } from "react";
 const taskContext = createContext();
 const Boards = [
   {
-    name: "To Do",
+    name: "ToDo",
     id: 0,
     description: "Things to do ",
     color: "blue",
@@ -22,10 +22,28 @@ const Boards = [
     color: "red",
   },
   {
-    name: "create new board",
+    name: "Homework",
     id: 3,
-    description: "create new board",
-    color: "dashed",
+    description: "Works to do",
+    color: "blue",
+  },
+  {
+    name: "Homework",
+    id: 4,
+    description: "Works to do",
+    color: "green",
+  },
+  {
+    name: "Homework",
+    id: 5,
+    description: "Works to do",
+    color: "green",
+  },
+  {
+    name: "Homework",
+    id: 6,
+    description: "Works to do",
+    color: "green",
   },
 ];
 // let randomColor = Math.floor(Math.random()*16777215).toString(16);

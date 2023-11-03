@@ -9,7 +9,7 @@ const Auth = ({ mode = "sign-in" }) => {
   const { isLoggedIn } = useAuthContext();
 
   return isLoggedIn ? (
-    <Navigate to="/" />
+    <Navigate to="/home" />
   ) : (
     <div className="flex flex-col items-center p-8">
       <img src={LogoIcon} className="mb-8 md:mb-14" />

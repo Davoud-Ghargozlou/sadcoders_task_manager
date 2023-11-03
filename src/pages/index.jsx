@@ -3,7 +3,7 @@ const Homepage = () => {
 
   return (
     <div className="h-screen">
-<img src={Homepicture} alt="" className="bg-cover h-full"/>
+<img src={Homepicture} alt="" className="bg-cover h-full w-full"/>
     </div>
   );
 };
