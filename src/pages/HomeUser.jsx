@@ -1,14 +1,14 @@
 import Board from "@/components/Board";
 import { taskContext } from "@/providers/TaskProvider";
-import React, { useContext } from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 
 const HomeUser = () => {
   const { boardcontext } = useContext(taskContext);
   const lastBoard = boardcontext.slice(-4);
   return (
     <div className="p-7">
-        <h4 className="mb-4">Recently viwed</h4>
+      <h4 className="mb-4">Recently viwed</h4>
       <div className="flex gap-3">
         {boardcontext.map((item) => {
           return (
@@ -22,7 +22,7 @@ const HomeUser = () => {
           );
         })}
       </div>
-      <h4 className="mt-4 mb-4">New</h4>
+      {/* <h4 className="mt-4 mb-4">New</h4>
       <div className="flex justify-between">
       {lastBoard.map((item) => {
           return (
@@ -49,7 +49,7 @@ const HomeUser = () => {
             </Link>
           );
         })}
-        </div>
+        </div> */}
     </div>
   );
 };
