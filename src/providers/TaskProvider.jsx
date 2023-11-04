@@ -21,12 +21,12 @@ const Boards = [
     description: "Works to do",
     color: "red",
   },
-  {
-    name: "create new board",
-    id: 3,
-    description: "Works to do",
-    color: "dashed",
-  },
+  // {
+  //   name: "create new board",
+  //   id: 3,
+  //   description: "Works to do",
+  //   color: "dashed",
+  // },
   // {
   //   name: "Homework",
   //   id: 4,

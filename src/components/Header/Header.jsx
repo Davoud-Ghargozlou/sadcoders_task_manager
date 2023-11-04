@@ -5,21 +5,33 @@ import plus from "@/assets/images/plus-circle-outline.svg";
 import alert from "@/assets/images/alert-circle-outline.svg";
 import bell from "@/assets/images/bell-outline.svg";
 import user from "@/assets/images/main-user.png";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useAuthContext } from "@/providers/AuthProvider";
 import Button from "../UI/Button";
 
 function Header() {
   const { isLoggedIn, currentUser, logout } = useAuthContext();
-  const {userId} = useParams();
+  const navigate = useNavigate();
+  const { userId } = useParams();
   console.log(currentUser);
+  const showboard = () => {
+    if (isLoggedIn == true) {
+      navigate("/home")
+    }else{
+      return
+    }
+  };
 
   return (
     <div className="h-14 p-3 flex items-center border-solid border-b-2 border-b-gray-950 border-opacity-5 px-7">
+      <Link to="/">
       <img src={logo} className="w-[73px]" />
+      </Link>
       <span className="ml-2 h-8 border-solid border-l-2 border-b-gray-950 border-opacity-5" />
-      <img src={board} className=" mx-2 w-6" />
-      <h1 className="">{userId}</h1>
+      <button className="flex" onClick={showboard}>
+        <img src={board} className=" mx-2 w-6" />
+        <h1 className="">Boards</h1>
+      </button>
       <span className="ml-2 h-8 border-solid border-l-2 border-b-gray-950 border-opacity-5" />
       <div className="relative m-2">
         <input
@@ -38,9 +50,9 @@ function Header() {
           <img src={alert} />
           <img src={bell} />
           <Link to="/">
-          <Button size="sm" variant="outline" onClick={() => logout()}>
-            Logout
-          </Button>
+            <Button size="sm" variant="outline" onClick={() => logout()}>
+              Logout
+            </Button>
           </Link>
           <Link to="/profile">
             <img className="w-10 h-10 rounded-full" src={currentUser?.avatar} />

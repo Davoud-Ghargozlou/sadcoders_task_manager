@@ -7,7 +7,7 @@ const Board = ({ text, color,onChange}) => {
     orange: "bg-orange-300",
     blue: "bg-blue-400",
     green: "bg-green-400",
-    dashed: "border border-slate-300 border-dashed"
+    dashed: "border border-slate-300 bg-slate-200 border-dashed"
   };
   return (
     <div
