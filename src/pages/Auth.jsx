@@ -12,8 +12,9 @@ const Auth = ({ mode = "sign-in" }) => {
     <Navigate to="/home" />
   ) : (
     <div className="flex flex-col items-center p-8">
+      <Link to="/">
       <img src={LogoIcon} className="mb-8 md:mb-14" />
-
+      </Link>
       <div className="w-full max-w-6xl flex flex-col-reverse md:flex-row rounded-lg overflow-hidden">
         <section className="basis-1/2 flex flex-col bg-gray-300 py-8 px-6 md:py-20 md:px-24">
           <h1 className="text-3xl font-bold text-[#212B36] mb-4 md:mb-8">
