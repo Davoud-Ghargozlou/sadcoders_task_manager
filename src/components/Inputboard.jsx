@@ -13,7 +13,17 @@ const Inputboard = () => {
   };
   const makeok = () => {
     if (value !== "") {
-      setBoardContext([...boardcontext, { name: value }]);
+      setBoardContext([
+        ...boardcontext,
+        { name: value, id: boardcontext.length + 1 },
+      ]);
+      localStorage.setItem(
+        "Boards-save",
+        JSON.stringify([
+          ...boardcontext,
+          { name: value, id: boardcontext.length + 1 },
+        ])
+      );
       setCreateboard(false);
       setValue("");
     }

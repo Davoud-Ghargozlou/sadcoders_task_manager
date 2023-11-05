@@ -21,9 +21,11 @@ const Boards = [
     color: "red",
   },
 ];
-// let randomColor = Math.floor(Math.random()*16777215).toString(16);
 const TaskProvider = ({ children }) => {
-  const [boardcontext, setBoardContext] = useState(Boards);
+  const [boardcontext, setBoardContext] = useState(() => {
+    const localBoards = localStorage.getItem("Boards-save");
+    return localBoards ? JSON.parse(localBoards) : Boards;
+  });
   const value = {
     boardcontext,
     setBoardContext,

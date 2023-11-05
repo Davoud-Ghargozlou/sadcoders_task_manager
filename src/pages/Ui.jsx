@@ -18,6 +18,7 @@ import Header from "../components/Header/Header";
 import P404 from "./P404";
 import NewCard from "@/components/NewCard";
 import Board from "@/components/Board";
+import Bord from "@/components/Bord";
 
 const Usersimages = [
   {
@@ -76,6 +77,7 @@ function Ui() {
       <Priorities color="blue" />
       <Card />
       <NewCard />
+      <Bord/>
     </div>
   );
 
