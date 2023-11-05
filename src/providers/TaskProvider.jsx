@@ -1,6 +1,5 @@
 import { createContext, useState } from "react";
 
-
 const taskContext = createContext();
 const Boards = [
   {
@@ -13,7 +12,7 @@ const Boards = [
     name: "Tasks",
     id: 1,
     description: "Task to do ",
-    color: "green"
+    color: "green",
   },
   {
     name: "Works",
@@ -21,30 +20,6 @@ const Boards = [
     description: "Works to do",
     color: "red",
   },
-  // {
-  //   name: "create new board",
-  //   id: 3,
-  //   description: "Works to do",
-  //   color: "dashed",
-  // },
-  // {
-  //   name: "Homework",
-  //   id: 4,
-  //   description: "Works to do",
-  //   color: "green",
-  // },
-  // {
-  //   name: "Homework",
-  //   id: 5,
-  //   description: "Works to do",
-  //   color: "green",
-  // },
-  // {
-  //   name: "Homework",
-  //   id: 6,
-  //   description: "Works to do",
-  //   color: "green",
-  // },
 ];
 // let randomColor = Math.floor(Math.random()*16777215).toString(16);
 const TaskProvider = ({ children }) => {
