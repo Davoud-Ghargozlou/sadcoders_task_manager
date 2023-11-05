@@ -30,7 +30,7 @@ const routes = [
         element: <TaskPage />,
       },
       {
-        path: "/card/:userId",
+        path: "/card/:boardId",
         element: <Cardpage />,
       },
     ],
