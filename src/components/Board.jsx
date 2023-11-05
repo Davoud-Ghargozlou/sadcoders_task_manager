@@ -11,7 +11,7 @@ const Board = ({ text, color,onChange}) => {
   };
   return (
     <div
-      className={`p-14 min-w-[300px]   justify-center items-center text-center rounded-md inline-block border  ${colors[color]}`}
+      className={`p-14 min-w-[300px]   justify-center items-center text-center rounded-md inline-block border text-white bg-slate-600`}
     >
       {text}
     </div>
