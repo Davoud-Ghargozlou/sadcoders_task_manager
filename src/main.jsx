@@ -8,9 +8,9 @@ import { AuthProvider } from "./providers/AuthProvider";
 import { TaskProvider } from "./providers/TaskProvider";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <TaskProvider>
-    <AuthProvider>
+  <AuthProvider>
+    <TaskProvider>
       <RouterProvider router={router} />
-    </AuthProvider>
-  </TaskProvider>
+    </TaskProvider>
+  </AuthProvider>
 );
