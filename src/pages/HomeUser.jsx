@@ -10,7 +10,7 @@ const HomeUser = () => {
 
   return (
     <div className="p-7">
-      <h4 className="mb-4">Recently viewed</h4>
+      <h4 className="mb-4">All Boards</h4>
       <div className="flex gap-2 flex-wrap">
         {boardcontext.map((item) => {
           return (
@@ -21,6 +21,16 @@ const HomeUser = () => {
         })}
         {/* <Board color="dashed" text="create new board" /> */}
         <Inputboard/>
+      </div>
+        <p className="mt-4">Recently viewed</p>
+      <div className="flex gap-2 flex-wrap mt-4">
+      {lastBoard.map((item)=>{
+        return(
+          <Link key={item.name}  to={`/card/${item.name}`}>
+          <Board key={item.id} text={item.name} id={item.id} color={item.color} />
+        </Link>
+        )
+      })}
       </div>
     </div>
   );
