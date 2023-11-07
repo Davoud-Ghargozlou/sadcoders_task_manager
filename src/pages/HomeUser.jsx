@@ -16,7 +16,7 @@ const HomeUser = () => {
         <span className="text-[26px]">Recently Viewed</span>
         <span className="text-[20px]">Menu</span>
       </div>
-      <div className="flex gap-[30px] flex-wrap overflow-">
+      <div className="flex gap-[30px] flex-wrap ">
       {boardHomeRecentlyVeiwed.map((item, index) => {
         return (
           <ImgMediaCard
