@@ -13,7 +13,6 @@ function Header() {
   const { isLoggedIn, currentUser, logout } = useAuthContext();
   const navigate = useNavigate();
   const { userId } = useParams();
-  console.log(currentUser);
   const showboard = () => {
     if (isLoggedIn == true) {
       navigate("/home")

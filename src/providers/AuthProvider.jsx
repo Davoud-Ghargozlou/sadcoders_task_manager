@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import axios from "axios";
+import { apiGetCurrentUser } from "@/api/user";
 
 const authContext = createContext();
 
@@ -10,6 +10,7 @@ const useAuthContext = () => {
 
 const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
   const [accessToken, setAccessToken] = useState(() =>
     localStorage.getItem("accessToken")
   );
@@ -26,19 +27,17 @@ const AuthProvider = ({ children }) => {
     localStorage.removeItem("accessToken");
   };
 
-  const fetchCurrentUser = async () => {
-    const result = await axios.get("http://demo2578450.mockable.io/auth/me", {
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-      },
-    });
-
+  const currentUsers = async () => {
+    if (isLoading) return;
+    setIsLoading(true);
+    const result = await apiGetCurrentUser();
     setCurrentUser(result.data);
+    setIsLoading(false);
   };
 
   useEffect(() => {
     if (isLoggedIn) {
-      fetchCurrentUser();
+      currentUsers();
     }
   }, [isLoggedIn]);
 
@@ -47,6 +46,8 @@ const AuthProvider = ({ children }) => {
     isLoggedIn,
     currentUser,
     saveAccessToken,
+    currentUser,
+    isLoading,
   };
 
   return <authContext.Provider value={values}>{children}</authContext.Provider>;
