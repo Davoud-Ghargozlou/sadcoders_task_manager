@@ -46,7 +46,7 @@ const Inputboard = () => {
           placeholder="create new board"
           value={value}
           onChange={handleinputboard}
-          className="p-14 w-[300px]  justify-center items-center text-center rounded-md inline-block border"
+          className="h-[144px] w-[360px]  justify-center items-center text-center rounded-md inline-block border"
         ></input>
         {createboard && (
           <div className="mt-1 flex justify-between">

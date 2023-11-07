@@ -7,6 +7,9 @@ import Users from "@/components/Users/Users";
 import attach from "@/assets/images/attach-outline.svg";
 import heart from "@/assets/images/heart-outline.svg";
 import message from "@/assets/images/message-square-outline.svg";
+import SingleUser from "../Users/SingleUser";
+import { Link } from "react-router-dom";
+// import { boardsHome } from "@/fake-data/boards-home";
 
 const Usersimages = [
   {
@@ -25,33 +28,17 @@ const Usersimages = [
     className: "h-[30px] w-[30px] -ml-[13px]",
   },
 ];
-const ImgMediaCard = () => {
+const ImgMediaCard = ({ title, description, users }) => {
   return (
-    <div className="flex flex-col p-4 rounded-lg bg-[#F4F4F4] mr-[30px] ">
-      {/* <img src={imgpost1} /> */}
-      {/* <div className="flex gap-2 mt-5">
-        <SinglePriority color="blue" />
-        <SinglePriority color="purple" />
-        <SinglePriority color="green" />
-        <SinglePriority color="red" />
-      </div> */}
-      <h1 className="font-bold text-lg">The Amazing Hubble</h1>
-      <p className="text-gray-400">
-        Color is so powerful that it can persuade, motivate.
-      </p>
-      <div className="flex justify-between mt-4">
-        <div className="">
-          <Users UsersList={Usersimages} />
-        </div>
-        {/* <div className="flex">
-          <span className="text-black">
-          </span>
-          <img src={attach} alt="" />
-          <img src={heart} alt="" />
-          <img src={message} alt="" />
-        </div> */}
+    <Link to={`/task/${title}`}>
+    <div className="flex flex-col p-[20px] rounded-lg bg-[#F4F4F4] min-w-[360px] max-w-[360px]">
+      <h1 className="mb-1">{title}</h1>
+      <p className="opacity-40 text-[13px]">{description}</p>
+      <div className="mt-[27px]">
+        <img src={users} alt="" />
       </div>
     </div>
+    </Link>
   );
 };
 
