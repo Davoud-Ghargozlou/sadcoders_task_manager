@@ -2,9 +2,11 @@ import { useState } from "react";
 import { useBoardContext } from "@/providers/BoardProvider";
 import BoardList from "./BoardList";
 import Bord from "../Bord";
+import { useParams } from "react-router-dom";
 
 const BoardMain = () => {
   const { isLoading, boardData } = useBoardContext();
+
 
   console.log(boardData);
   return (
@@ -14,10 +16,11 @@ const BoardMain = () => {
       ) : (
         <>
           <div className="flex gap-4">
-            <Bord/>
-            <Bord/>
-            <Bord/>
-            <Bord/>
+            <p></p>
+            <Bord />
+            <Bord />
+            <Bord />
+            <Bord />
             {/* {boardData?.lists?.map((list) => (
               <BoardList list={list} key={list.id} />
             ))} */}

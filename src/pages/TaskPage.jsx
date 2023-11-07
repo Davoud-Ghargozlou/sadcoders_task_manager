@@ -8,7 +8,9 @@ import Usericon from "@/assets/images/User.png"
 import Usericon2 from "@/assets/images/User2.png"
 import Usericon3 from "@/assets/images/User3.png"
 import AddUser from "@/assets/images/adduser.png"
+import { useParams } from 'react-router-dom'
 const TaskPage = () => {
+  const { boardId } = useParams();
     const Usersimages = [
         {
           id: 1,
@@ -33,9 +35,9 @@ const TaskPage = () => {
       ];
   return (
     <>
-    <div className='flex justify-between px-7'>
+    <div className='flex justify-between p-[30px]'>
     <div className='flex items-center'>
-        <span className='pr-20'>Brackets</span>
+        <span className='pr-20'>{boardId}</span>
         <div className='flex gap-5 items-center'> 
         <img src={heart} alt="" className='w-5 h-5' />
         <img src={globe} alt="" className='w-5 h-5' />

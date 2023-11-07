@@ -1,7 +1,9 @@
 import Board from "@/components/Board";
+import ImgMediaCard from "@/components/Card/Add-Card";
 import Inputboard from "@/components/Inputboard";
+import { boardHomeRecentlyVeiwed,boardHomeNew, boardProcess, boardCompleted } from "@/fake-data/boards-home";
 import { taskContext } from "@/providers/TaskProvider";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 const HomeUser = () => {
@@ -9,27 +11,60 @@ const HomeUser = () => {
   const lastBoard = boardcontext.slice(-4);
 
   return (
-    <div className="p-7">
-      <h4 className="mb-4">All Boards</h4>
-      <div className="flex gap-2 flex-wrap">
-        {boardcontext.map((item) => {
-          return (
-            <Link key={item.name}  to={`/card/${item.name}`}>
-              <Board key={item.id} text={item.name} id={item.id} color={item.color} />
-            </Link>
-          );
-        })}
-        {/* <Board color="dashed" text="create new board" /> */}
-        <Inputboard/>
+    <div className="p-[30px]">
+      <div className="flex justify-between mb-4 items-center ">
+        <span className="text-[26px]">Recently Viewed</span>
+        <span className="text-[20px]">Menu</span>
       </div>
-        <p className="mt-4">Recently viewed</p>
-      <div className="flex gap-2 flex-wrap mt-4">
-      {lastBoard.map((item)=>{
-        return(
-          <Link key={item.name}  to={`/card/${item.name}`}>
-          <Board key={item.id} text={item.name} id={item.id} color={item.color} />
-        </Link>
-        )
+      <div className="flex gap-[30px] flex-wrap overflow-">
+      {boardHomeRecentlyVeiwed.map((item, index) => {
+        return (
+          <ImgMediaCard
+            key={index}
+            title={item.title}
+            description={item.description}
+            users={item.users}
+          />
+        );
+      })}
+      </div>
+      <p className="text-[26px] my-4">New</p>
+      <div className="flex gap-[30px] flex-wrap">
+      {boardHomeNew.map((item, index) => {
+        return (
+          <ImgMediaCard
+            key={index}
+            title={item.title}
+            description={item.description}
+            users={item.users}
+          />
+        );
+      })}
+      </div>
+      <p className="text-[26px] my-4">Process</p>
+      <div className="flex gap-[30px] flex-wrap">
+      {boardProcess.map((item, index) => {
+        return (
+          <ImgMediaCard
+            key={index}
+            title={item.title}
+            description={item.description}
+            users={item.users}
+          />
+        );
+      })}
+      </div>
+      <p className="text-[26px] my-4">Completed</p>
+      <div className="flex gap-[30px] flex-wrap">
+      {boardCompleted.map((item, index) => {
+        return (
+          <ImgMediaCard
+            key={index}
+            title={item.title}
+            description={item.description}
+            users={item.users}
+          />
+        );
       })}
       </div>
     </div>
