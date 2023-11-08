@@ -19,6 +19,7 @@ import P404 from "./P404";
 import NewCard from "@/components/NewCard";
 import Board from "@/components/Board";
 import Bord from "@/components/Bord";
+import Information from "@/components/Card/Information";
 
 const Usersimages = [
   {
@@ -78,6 +79,7 @@ function Ui() {
       <Card />
       <NewCard />
       <Bord/>
+      <Information/>
     </div>
   );
 
