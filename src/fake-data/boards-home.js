@@ -1,6 +1,12 @@
 import Usericon from "/src/assets/images/User.png";
 import Usericon2 from "/src/assets/images/User2.png";
 import Usericon3 from "/src/assets/images/User3.png";
+import CaerdN1 from "@/assets/images/CardN1.png"
+import CaerdN2 from "@/assets/images/CardN2.png"
+import CaerdN3 from "@/assets/images/CardN3.png"
+import CaerdN4 from "@/assets/images/CardN4.png"
+import CaerdN5 from "@/assets/images/CardN5.png"
+import CaerdN6 from "@/assets/images/CardN6.png"
 const boardHomeRecentlyVeiwed = [
   {
     title: "Brackets",
@@ -93,4 +99,136 @@ const boardCompleted = [
     users: Usericon,
   },
 ];
-export { boardHomeRecentlyVeiwed, boardHomeNew, boardProcess, boardCompleted };
+const DesignCards = [
+  {
+    image: "",
+    title: "Old fashioned recipe for preventing allergies and chemical sensitivities",
+    color: "blue",
+    description: "",
+  },
+  {
+    image: "",
+    title: "Home business advertising ideas",
+    color: "blue",
+    color1: "red",
+    color2: "purple",
+    color3: "green",
+    description: "Successful businesses know the importance of building and maintaining good working.",
+  },
+  {
+    image: CaerdN1,
+    title: "Cosmetic surgery abroad making the right choice",
+    color: "blue",
+    description: "",
+  },
+]
+const Prototip = [
+  {
+    image: "",
+    title: "Home business advertising ideas",
+    color: "blue",
+    color1: "purple",
+    color2: "red",
+    description: "Successful businesses know the importance of building and maintaining good working.",
+  },
+  {
+    image: "",
+    title: "Unmatched toner cartridge quality 20 less than oem price",
+    color: "blue",
+    color1: "red",
+    color2: "",
+    color3: "",
+    description: "Why read motivational sayings? For motivation! You might need a bit, if you can use last year’s list of goals this year because it’s as good as new.",
+  },
+  {
+    image: CaerdN2,
+    title: "Cosmetic surgery abroad making the right choice",
+    color: "blue",
+    description: "",
+  },
+  {
+    image: CaerdN3,
+    title: "How to look up",
+    color: "green",
+    description: "Are you considering buying a compatible inkjet cartridge for your printer?",
+  },
+]
+const Trello = [
+  {
+    image: CaerdN4,
+    title: "Types of paper in catalog printing",
+    color: "purple",
+    color1: "red",
+    color2: "blue",
+    description: "Branding is no longer simply about visual appeal (or the cherry in the apple pie example, as given in my earlier article).",
+  },
+  {
+    image: '',
+    title: "There is no competition",
+    color: "blue",
+    color1: "green",
+    color2: "",
+    description: "This article is floated online with an aim to help you find the best dvd printing solution.",
+  },
+]
+const Test =[
+  {
+    image: "",
+    title: "Linux or windows which is it",
+    color: "blue",
+    color1: "red",
+    color2: "",
+    description: "Saving money – is something we would all like.",
+  },
+  {
+    image: CaerdN5,
+    title: "Be single minded",
+    color: "purple",
+    color1: "red",
+    color2: "blue",
+    description: "Create a list with all possible keywords that fit to your product, service or business field.",
+  },
+  {
+    image: "",
+    title: "Linux or windows which is it",
+    color: "blue",
+    color1: "",
+    color2: "",
+    description: "Saving money – is something we would all like.",
+  },
+  {
+    image: "",
+    title: "Dna the future of nutrition",
+    color: "blue",
+    color1: "green",
+    color2: "",
+    description: "“Why does anyone want a vasectomy reversal?” This is a question I hear any time I tell someone what I do for a living.",
+  },
+]
+const Final=[
+  {
+    image: "",
+    title: "At home treatments for beauty on a budget",
+    color: "blue",
+    color1: "red",
+    color2: "purple",
+    description: "The holidays bring with them thoughts of carving and serving delicious turkey dinners to your family and friends. Tradition has its fans, but perhaps this year you’d like to try a twist to your turkey recipe.",
+  },
+  {
+    image: "",
+    title: "Home business advertising ideas",
+    color: "purple",
+    color1: "green",
+    color2: "",
+    description: "Successful businesses know the importance of building and maintaining good working.",
+  },
+  {
+    image: CaerdN6,
+    title: "Tips for choosing the perfect gloss for your lips",
+    color: "blue",
+    color1: "green",
+    color2: "",
+    description: "With MySpace becoming more popular every day, there is the constant need to be different. There are millions of users.",
+  },
+]
+export { boardHomeRecentlyVeiwed,Test,Final, Prototip,Trello, boardHomeNew, boardProcess, boardCompleted,DesignCards };

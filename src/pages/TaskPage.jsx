@@ -10,6 +10,7 @@ import Usericon3 from "@/assets/images/User3.png";
 import AddUser from "@/assets/images/adduser.png";
 import { useParams } from "react-router-dom";
 import TaskCard from "@/components/Card/TaskCard";
+import { DesignCards, Final, Prototip, Test, Trello } from "@/fake-data/boards-home";
 const TaskPage = () => {
   const { boardId } = useParams();
   const Usersimages = [
@@ -53,37 +54,134 @@ const TaskPage = () => {
       </div>
       <div className="flex gap-[30px] mt-[15px]">
         <div className="flex-col">
-        <div
-          className="min-w-[360px] max-w[360px]  h-[50px] bg-slate-200
+          <div
+            className="min-w-[360px] max-w[360px]  h-[50px] bg-slate-200
     flex items-center p-[20px] rounded-md mb-[10px]"
-        >
-          <span>Design</span>
+          >
+            <span>Design</span>
+          </div>
+          <div>
+            {DesignCards.map((item, index) => {
+              return (
+                <div key={index} className="my-[10px]">
+                  <TaskCard
+                    title={item.title}
+                    users={Usericon}
+                    description={item.description}
+                    imgpic={item.image}
+                    color={item.color}
+                    color1={item.color1}
+                    color2={item.color2}
+                    color3={item.color3}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
-          <TaskCard color="blue" description="jssjdhakdaha" title="ddddddddd" users={Usericon2}/>
-        </div>
-        <div
-          className="min-w-[360px] max-w[360px]  h-[50px] bg-slate-200
+        <div className="flex-col">
+          <div
+            className="min-w-[360px] max-w[360px]  h-[50px] bg-slate-200
     flex items-center p-[20px] rounded-md"
-        >
-          <span>Prototip</span>
+          >
+            <span>Prototip</span>
+          </div>
+          {Prototip.map((item, index) => {
+            return (
+              <div key={index} className="my-[10px]">
+                <TaskCard
+                  title={item.title}
+                  users={Usericon}
+                  description={item.description}
+                  imgpic={item.image}
+                  color={item.color}
+                  color1={item.color1}
+                  color2={item.color2}
+                  color3={item.color3}
+                />
+              </div>
+            );
+          })}
         </div>
-        <div
-          className="min-w-[360px] max-w[360px]  h-[50px] bg-slate-200
+        <div className="flex-col">
+          <div
+            className="min-w-[360px] max-w[360px]  h-[50px] bg-slate-200
     flex items-center p-[20px] rounded-md"
-        >
-          <span>Trello</span>
+          >
+            <span>Trello</span>
+            </div>
+            <div>
+              {Trello.map((item, index) => {
+                return (
+                  <div key={index} className="my-[10px]">
+                    <TaskCard
+                      title={item.title}
+                      users={Usericon}
+                      description={item.description}
+                      imgpic={item.image}
+                      color={item.color}
+                      color1={item.color1}
+                      color2={item.color2}
+                      color3={item.color3}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          
         </div>
+        <div className="flex-col">
         <div
           className="min-w-[360px] max-w[360px] h-[50px] bg-slate-200
     flex items-center p-[20px] rounded-md"
         >
           <span>Test</span>
         </div>
+        <div>
+              {Test.map((item, index) => {
+                return (
+                  <div key={index} className="my-[10px]">
+                    <TaskCard
+                      title={item.title}
+                      users={Usericon}
+                      description={item.description}
+                      imgpic={item.image}
+                      color={item.color}
+                      color1={item.color1}
+                      color2={item.color2}
+                      color3={item.color3}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+        </div>
+        <div className="flex-col">
         <div
           className="min-w-[360px] max-w[360px] h-[50px] bg-slate-200
     flex items-center p-[20px] rounded-md"
         >
           <span>Final</span>
+          </div>
+          <div>
+              {Final.map((item, index) => {
+                return (
+                  <div key={index} className="my-[10px]">
+                    <TaskCard
+                      title={item.title}
+                      users={Usericon}
+                      description={item.description}
+                      imgpic={item.image}
+                      color={item.color}
+                      color1={item.color1}
+                      color2={item.color2}
+                      color3={item.color3}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+        
         </div>
       </div>
     </div>
